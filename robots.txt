@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://orid-maker.github.io/israel-shmueli-site/sitemap.xml
