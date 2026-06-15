@@ -41,7 +41,7 @@ The current deliverable is plain HTML/CSS. It can be recreated manually in Wix S
 
 Check these details before sending the page to Google:
 
-- Phone number: `050-969-7280`
+- Phone number: `050-476-6560`
 - Email: `yisrael.shmueli@gmail.com`
 - Address: `האשל 5, קיסריה`
 - Project descriptions and external links
