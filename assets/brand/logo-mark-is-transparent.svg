@@ -27,7 +27,7 @@
     <line x1="80.2" y1="41" x2="80.2" y2="114" stroke="#8d313b" stroke-width=".42" opacity=".32"/>
     <path d="M78 132 l4.9 4.9 l-4.9 4.9 l-4.9 -4.9 z" fill="#fbf9f4" stroke="#8d313b" stroke-width="1.05"/>
     <path d="M70.5 136.9H48M85.5 136.9H108" fill="none" stroke="#8d313b" stroke-width=".62" opacity=".42"/>
-    <text class="mono" x="22" y="113" font-size="96" fill="#1a2225">I</text>
+    <text class="mono" x="26" y="113" font-size="96" fill="#1a2225">I</text>
     <text class="mono" x="82" y="113" font-size="95" fill="#1a2225">S</text>
   </g>
 </svg>

@@ -8,6 +8,6 @@
   <path d="M16 18H28M36 18H48M16 46H28M36 46H48" fill="none" stroke="#1b2327" stroke-width=".4" opacity=".34"/>
   <line x1="32" y1="17" x2="32" y2="45" stroke="#8d313b" stroke-width="1.12"/>
   <path d="M32 49 l2.45 2.45 l-2.45 2.45 l-2.45 -2.45 z" fill="#fbfcfa" stroke="#8d313b" stroke-width=".66"/>
-  <text class="mono" x="14" y="44" font-size="35" fill="#1a2225">I</text>
+  <text class="mono" x="15.5" y="44" font-size="35" fill="#1a2225">I</text>
   <text class="mono" x="34" y="44" font-size="34.5" fill="#1a2225">S</text>
 </svg>

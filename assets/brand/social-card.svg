@@ -19,7 +19,7 @@
     <path d="M18 18h11M18 18v11M102 18H91M102 18v11M18 102h11M18 102V91M102 102H91M102 102V91" fill="none" stroke="#1b2327" stroke-width=".95" opacity=".62"/>
     <line x1="60" y1="27" x2="60" y2="92" stroke="#8d313b" stroke-width="2.1"/>
     <path d="M60 101 l3.8 3.8 l-3.8 3.8 l-3.8 -3.8 z" fill="#FBFCFA" stroke="#8d313b" stroke-width=".95"/>
-    <text class="mono" x="18" y="86" font-size="74" fill="#1a2225">I</text>
+    <text class="mono" x="21" y="86" font-size="74" fill="#1a2225">I</text>
     <text class="mono" x="62" y="86" font-size="73" fill="#1a2225">S</text>
   </g>
   <text class="name" x="600" y="300" text-anchor="middle" font-size="76" fill="#222321">ISRAEL SHMUELI</text>
