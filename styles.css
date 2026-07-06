@@ -107,6 +107,10 @@ img {
   margin-inline: auto;
 }
 
+main section {
+  scroll-margin-top: 94px;
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -681,67 +685,90 @@ p {
   content: "";
 }
 
+.project-showcase {
+  display: grid;
+  grid-template-columns: minmax(300px, .88fr) minmax(0, 1.12fr);
+  align-items: stretch;
+  min-height: clamp(460px, 48vw, 610px);
+  margin-block: -6px clamp(28px, 5vw, 52px);
+  overflow: hidden;
+  border: 1px solid rgba(38, 111, 152, 0.16);
+  background:
+    linear-gradient(135deg, rgba(132, 205, 240, 0.10), transparent 34%),
+    rgba(255, 255, 255, 0.76);
+  box-shadow:
+    0 28px 76px rgba(18, 38, 52, 0.08),
+    inset 0 0 0 1px rgba(255,255,255,.72);
+}
+
+html[data-lang="en"] .project-showcase {
+  direction: ltr;
+}
+
 .project-feature {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 330px;
-  gap: clamp(28px, 5vw, 60px);
-  padding: clamp(28px, 5vw, 56px);
-  margin-block-end: 20px;
+  grid-template-columns: 1fr;
+  align-content: center;
+  gap: clamp(24px, 4vw, 38px);
+  padding: clamp(30px, 5vw, 58px);
+  margin: 0;
   background:
-    linear-gradient(135deg, rgba(132, 205, 240, 0.12), transparent 36%),
-    var(--graphite);
-  color: white;
-  box-shadow: var(--shadow);
+    linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(237, 247, 252, 0.72)),
+    rgba(255, 255, 255, 0.86);
+  color: var(--ink);
+  box-shadow: none;
 }
 
 .project-art {
   position: relative;
-  min-height: clamp(330px, 42vw, 500px);
-  max-width: 980px;
-  margin: -6px auto clamp(28px, 5vw, 52px);
+  min-height: 100%;
+  max-width: none;
+  margin: 0;
   overflow: hidden;
-  border: 1px solid rgba(38, 111, 152, 0.16);
+  border: 0;
+  border-inline-end: 1px solid rgba(38, 111, 152, 0.14);
   background:
-    radial-gradient(circle at 50% 54%, rgba(255,255,255,.18), rgba(255,255,255,.82) 58%, rgba(245,251,254,.96) 100%),
-    url("assets/editorial/blueprint-projects.jpg") center 52% / auto 106% no-repeat,
+    radial-gradient(circle at 50% 54%, rgba(255,255,255,.04), rgba(255,255,255,.62) 62%, rgba(245,251,254,.94) 100%),
+    url("assets/editorial/blueprint-projects.jpg") center 52% / auto 98% no-repeat,
     #f7fcff;
-  box-shadow:
-    0 30px 80px rgba(18, 38, 52, 0.08),
-    inset 0 0 0 1px rgba(255,255,255,.72);
+  box-shadow: none;
 }
 
 .project-art::after {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(90deg, rgba(255,255,255,.70), transparent 30%, transparent 70%, rgba(255,255,255,.64)),
+    linear-gradient(90deg, rgba(255,255,255,.56), transparent 32%, transparent 72%, rgba(255,255,255,.62)),
     repeating-linear-gradient(135deg, rgba(38,111,152,.035) 0 1px, transparent 1px 22px);
   content: "";
 }
 
 .project-feature p {
-  color: rgba(255, 255, 255, 0.78);
+  color: #4f6673;
+  font-size: clamp(17px, 1.4vw, 19px);
 }
 
 .project-feature dl {
   display: grid;
-  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
   margin: 0;
 }
 
 .project-feature dl div {
-  padding: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 20px;
+  border: 1px solid rgba(38, 111, 152, 0.16);
+  background: rgba(255, 255, 255, 0.68);
 }
 
 .project-feature dt {
-  color: rgba(255, 255, 255, 0.65);
+  color: #5b7380;
   font-size: 13px;
 }
 
 .project-feature dd {
   margin: 0;
-  color: var(--metal-pale);
+  color: #1f4d66;
   font-size: 34px;
   font-weight: 800;
 }
@@ -761,7 +788,7 @@ p {
 }
 
 .project-feature .link-row a {
-  color: var(--metal-pale);
+  color: var(--metal-dark);
 }
 
 .project-list {
@@ -1126,6 +1153,7 @@ p {
   .about-section,
   .contact-section {
     padding-block: 64px;
+    scroll-margin-top: 78px;
   }
 
   .project-feature,
@@ -1142,7 +1170,24 @@ p {
 
   .project-art {
     min-height: 360px;
+    padding-inline: 0;
+    border-inline-end: 0;
+    border-block-end: 1px solid rgba(38, 111, 152, 0.14);
     background-size: auto 100%, auto 96%, auto;
+  }
+
+  .project-showcase {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    margin-block: 0 34px;
+  }
+
+  .project-feature {
+    padding: 28px 20px;
+  }
+
+  .project-feature dl {
+    grid-template-columns: 1fr;
   }
 
   .project-feature dl div {
