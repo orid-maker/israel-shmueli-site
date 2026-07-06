@@ -1,1 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="900" height="210" viewBox="0 0 900 210" role="img" aria-label="Israel Shmueli logo"><defs><style><![CDATA[.name{font-family:'EB Garamond','Noto Serif Display',Georgia,serif;font-weight:400;letter-spacing:.18em}.mono{font-family:'EB Garamond','Noto Serif Display',Georgia,serif;font-weight:400;letter-spacing:-.03em}.sub{font-family:'Inter Display','Inter',Arial,sans-serif;font-weight:500;letter-spacing:.22em}]]></style></defs><rect width="900" height="210" fill="transparent"/><g transform="translate(38,45) scale(.9)"><rect x="2" y="2" width="116" height="116" fill="#FBF8F2" stroke="#343635" stroke-width="3"/><rect x="13" y="13" width="94" height="94" fill="none" stroke="#343635" stroke-width="1.25" opacity=".72"/><line x1="60" y1="27" x2="60" y2="93" stroke="#7E2430" stroke-width="2.6"/><text class="mono" x="31" y="82" font-size="70" fill="#222321">I</text><text class="mono" x="66" y="82" font-size="70" fill="#222321">S</text></g><text class="name" x="510" y="93" text-anchor="middle" font-size="52" fill="#222321">ISRAEL SHMUELI</text><line x1="237" y1="121" x2="783" y2="121" stroke="#343635" stroke-width="1.2" opacity=".75"/><line x1="285" y1="132" x2="475" y2="132" stroke="#7E2430" stroke-width="1.7"/><line x1="548" y1="132" x2="738" y2="132" stroke="#7E2430" stroke-width="1.7"/><path d="M511 127l7 7-7 7-7-7z" fill="transparent" stroke="#7E2430" stroke-width="1.1"/><text class="sub" x="510" y="162" text-anchor="middle" font-size="13" fill="#343635">PRACTICING NOTARY &amp; ATTORNEY AT LAW</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="210" viewBox="0 0 900 210" role="img" aria-label="Israel Shmueli logo">
+
+  <defs>
+    <style><![CDATA[
+      .name { font-family: 'EB Garamond', 'Noto Serif Display', Georgia, serif; font-weight: 400; letter-spacing: 0.18em; }
+      .mono { font-family: 'EB Garamond', 'Noto Serif Display', Georgia, serif; font-weight: 400; letter-spacing: -0.03em; }
+      .sub { font-family: 'Inter Display', 'Inter', Arial, sans-serif; font-weight: 500; letter-spacing: 0.22em; }
+      .micro { font-family: 'Inter Display', 'Inter', Arial, sans-serif; font-weight: 500; letter-spacing: 0.32em; }
+    ]]></style>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <rect width="900" height="210" fill="transparent"/>
+  
+    <g id="is-mark" transform="translate(38,45) scale(0.9)">
+      <rect x="2" y="2" width="116" height="116" fill="#FBF8F2" stroke="#343635" stroke-width="3"/>
+      <rect x="13" y="13" width="94" height="94" fill="none" stroke="#343635" stroke-width="1.25" opacity="0.72"/>
+      <line x1="60" y1="27" x2="60" y2="93" stroke="#7E2430" stroke-width="2.35"/>
+      <text class="mono" x="43.5" y="82" text-anchor="middle" font-size="70" fill="#222321">I</text>
+      <text class="mono" x="76.5" y="82" text-anchor="middle" font-size="70" fill="#222321">S</text>
+    </g>
+  <text class="name" x="510" y="93" text-anchor="middle" font-size="52" fill="#222321">ISRAEL SHMUELI</text>
+  <line x1="237" y1="121" x2="783" y2="121" stroke="#343635" stroke-width="1.2" opacity="0.75"/>
+  <line x1="285" y1="132" x2="475" y2="132" stroke="#7E2430" stroke-width="1.7"/>
+  <line x1="548" y1="132" x2="738" y2="132" stroke="#7E2430" stroke-width="1.7"/>
+  <path d="M511 127 l7 7 l-7 7 l-7 -7 z" fill="transparent" stroke="#7E2430" stroke-width="1.1"/>
+  <text class="sub" x="510" y="162" text-anchor="middle" font-size="13" fill="#343635">PRACTICING NOTARY &amp; ATTORNEY AT LAW</text>
+</svg>

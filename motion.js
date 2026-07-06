@@ -7,7 +7,10 @@
   const heroMark = document.querySelector('.hero-logo');
   const languageButtons = document.querySelectorAll('[data-set-lang]');
 
-  const setLanguage = (language) => {
+  let languageTimer;
+  let languageEndTimer;
+
+  const applyLanguage = (language) => {
     const nextLanguage = language === 'en' ? 'en' : 'he';
     root.dataset.lang = nextLanguage;
     root.lang = nextLanguage === 'en' ? 'en' : 'he';
@@ -19,15 +22,34 @@
     });
   };
 
+  const setLanguage = (language, animate = false) => {
+    const nextLanguage = language === 'en' ? 'en' : 'he';
+    if (root.dataset.lang === nextLanguage) return;
+
+    window.clearTimeout(languageTimer);
+    window.clearTimeout(languageEndTimer);
+
+    if (!animate || reducedMotion.matches) {
+      root.classList.remove('is-language-changing');
+      applyLanguage(nextLanguage);
+      return;
+    }
+
+    root.classList.add('is-language-changing');
+    languageTimer = window.setTimeout(() => applyLanguage(nextLanguage), 120);
+    languageEndTimer = window.setTimeout(() => root.classList.remove('is-language-changing'), 320);
+  };
+
   languageButtons.forEach((button) => {
-    button.addEventListener('click', () => setLanguage(button.dataset.setLang));
+    button.addEventListener('click', () => setLanguage(button.dataset.setLang, true));
   });
 
-  setLanguage(root.dataset.lang || 'he');
+  applyLanguage(root.dataset.lang || 'he');
 
   const revealSelectors = [
     '.intro-grid > *',
     '.section-heading',
+    '.project-art',
     '.service-grid article',
     '.project-feature',
     '.project-list article',

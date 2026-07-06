@@ -15,12 +15,12 @@
     <rect x="18.5" y="18.5" width="141" height="141" fill="none" stroke="#266f98" stroke-width=".55" opacity=".22"/>
     <path d="M31 39H75M103 39H147M31 139H75M103 139H147" fill="none" stroke="#1d2428" stroke-width=".65" opacity=".34"/>
     <path d="M26 26h14M26 26v14M152 26h-14M152 26v14M26 152h14M26 152v-14M152 152h-14M152 152v-14" fill="none" stroke="#1d2428" stroke-width=".95" opacity=".62"/>
-    <line x1="89" y1="42" x2="89" y2="132" stroke="#82313C" stroke-width="2.5" stroke-linecap="square"/>
-    <line x1="84.5" y1="46" x2="84.5" y2="128" stroke="#82313C" stroke-width=".52" opacity=".42"/>
-    <line x1="93.5" y1="46" x2="93.5" y2="128" stroke="#82313C" stroke-width=".52" opacity=".42"/>
+    <line x1="89" y1="42" x2="89" y2="132" stroke="#82313C" stroke-width="2.2" stroke-linecap="square"/>
+    <line x1="85.4" y1="47" x2="85.4" y2="127" stroke="#82313C" stroke-width=".48" opacity=".36"/>
+    <line x1="92.6" y1="47" x2="92.6" y2="127" stroke="#82313C" stroke-width=".48" opacity=".36"/>
     <path d="M89 144 l5.5 5.5 l-5.5 5.5 l-5.5 -5.5 z" fill="none" stroke="#82313C" stroke-width="1.05"/>
     <path d="M82 149.5H56M96 149.5h26" fill="none" stroke="#82313C" stroke-width=".62" opacity=".48"/>
-    <text class="serif" x="39" y="124" font-size="103" fill="#1c2224">I</text>
-    <text class="serif" x="96" y="124" font-size="101" fill="#1c2224">S</text>
+    <text class="serif" x="63.5" y="124" text-anchor="middle" font-size="103" fill="#1c2224">I</text>
+    <text class="serif" x="115" y="124" text-anchor="middle" font-size="101" fill="#1c2224">S</text>
   </g>
 </svg>

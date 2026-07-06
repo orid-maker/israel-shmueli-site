@@ -47,6 +47,35 @@ html[data-lang="en"] .lang-he {
   display: none !important;
 }
 
+.hero-copy,
+.hero-identity,
+.hero-facts,
+.main-nav,
+.intro-section,
+.services-section,
+.projects-section,
+.sources-section,
+.about-section,
+.contact-section,
+.site-footer {
+  transition: opacity .28s ease, transform .28s ease;
+}
+
+html.is-language-changing .hero-copy,
+html.is-language-changing .hero-identity,
+html.is-language-changing .hero-facts,
+html.is-language-changing .main-nav,
+html.is-language-changing .intro-section,
+html.is-language-changing .services-section,
+html.is-language-changing .projects-section,
+html.is-language-changing .sources-section,
+html.is-language-changing .about-section,
+html.is-language-changing .contact-section,
+html.is-language-changing .site-footer {
+  opacity: .24;
+  transform: translateY(6px);
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -300,7 +329,7 @@ img {
   grid-column: 1;
   align-self: center;
   justify-self: center;
-  width: min(880px, calc(100vw - 40px));
+  width: min(1080px, calc(100vw - 40px));
   margin-inline: auto;
   padding-block: clamp(42px, 6.5vh, 78px);
   text-align: center;
@@ -665,6 +694,31 @@ p {
   box-shadow: var(--shadow);
 }
 
+.project-art {
+  position: relative;
+  min-height: clamp(330px, 42vw, 500px);
+  max-width: 980px;
+  margin: -6px auto clamp(28px, 5vw, 52px);
+  overflow: hidden;
+  border: 1px solid rgba(38, 111, 152, 0.16);
+  background:
+    radial-gradient(circle at 50% 54%, rgba(255,255,255,.18), rgba(255,255,255,.82) 58%, rgba(245,251,254,.96) 100%),
+    url("assets/editorial/blueprint-projects.jpg") center 52% / auto 106% no-repeat,
+    #f7fcff;
+  box-shadow:
+    0 30px 80px rgba(18, 38, 52, 0.08),
+    inset 0 0 0 1px rgba(255,255,255,.72);
+}
+
+.project-art::after {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.70), transparent 30%, transparent 70%, rgba(255,255,255,.64)),
+    repeating-linear-gradient(135deg, rgba(38,111,152,.035) 0 1px, transparent 1px 22px);
+  content: "";
+}
+
 .project-feature p {
   color: rgba(255, 255, 255, 0.78);
 }
@@ -741,9 +795,32 @@ p {
 }
 
 .about-section {
+  position: relative;
+  overflow: hidden;
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(255, 255, 255, 0.88)),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.94) 0 62%, rgba(237, 247, 252, 0.54) 62% 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.9)),
     repeating-linear-gradient(135deg, rgba(155, 215, 244, 0.22) 0 1px, transparent 1px 18px);
+}
+
+.about-section::after {
+  position: absolute;
+  inset-block: 0;
+  right: max(0px, calc((100vw - 1120px) / 2 - 54px));
+  width: min(34vw, 430px);
+  min-width: 300px;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.96), rgba(255,255,255,.36) 38%, rgba(255,255,255,.04)),
+    url("assets/editorial/legal-architecture.jpg") center right / cover no-repeat;
+  opacity: .78;
+  pointer-events: none;
+  content: "";
+}
+
+.about-section .container {
+  position: relative;
+  z-index: 1;
+  padding-right: min(36vw, 440px);
 }
 
 .about-card,
@@ -791,7 +868,13 @@ p {
 
 .contact-card[href^="mailto"] strong {
   direction: ltr;
-  text-align: right;
+  text-align: start;
+  white-space: nowrap;
+  font-size: clamp(15px, 2vw, 18px);
+}
+
+.email-card {
+  grid-column: span 2;
 }
 
 .site-footer {
@@ -1046,6 +1129,7 @@ p {
   }
 
   .project-feature,
+  .project-art,
   .service-grid article,
   .project-list article,
   .about-card,
@@ -1054,6 +1138,11 @@ p {
   .process-list,
   .sources-grid li {
     padding-inline: 20px;
+  }
+
+  .project-art {
+    min-height: 360px;
+    background-size: auto 100%, auto 96%, auto;
   }
 
   .project-feature dl div {
@@ -1071,5 +1160,22 @@ p {
 
   .contact-actions {
     grid-template-columns: 1fr;
+  }
+
+  .email-card {
+    grid-column: auto;
+  }
+
+  .about-section::after {
+    inset-block: auto 0;
+    right: -78px;
+    width: 260px;
+    min-width: 0;
+    height: 360px;
+    opacity: .22;
+  }
+
+  .about-section .container {
+    padding-right: 0;
   }
 }
