@@ -1,1 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="IS"><rect x="4" y="4" width="56" height="56" fill="#FBF8F2" stroke="#343635" stroke-width="2"/><line x1="32" y1="16" x2="32" y2="48" stroke="#7E2430" stroke-width="2"/><text x="16" y="45" font-family="Georgia,serif" font-size="37" fill="#222321">I</text><text x="35" y="45" font-family="Georgia,serif" font-size="37" fill="#222321">S</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="IS">
+  <rect x="5" y="5" width="54" height="54" fill="#fbf8f2" stroke="#1d2428" stroke-width="1.8"/>
+  <rect x="10" y="10" width="44" height="44" fill="none" stroke="#1d2428" stroke-width=".55" opacity=".48"/>
+  <path d="M15 17h13M36 17h13M15 47h13M36 47h13" fill="none" stroke="#1d2428" stroke-width=".45" opacity=".34"/>
+  <line x1="32" y1="15" x2="32" y2="46" stroke="#82313C" stroke-width="1.45"/>
+  <path d="M32 49 l2.8 2.8 l-2.8 2.8 l-2.8 -2.8 z" fill="none" stroke="#82313C" stroke-width=".72"/>
+  <text x="17" y="45" font-family="Georgia, serif" font-size="37" fill="#1c2224">I</text>
+  <text x="35" y="45" font-family="Georgia, serif" font-size="36" fill="#1c2224">S</text>
+</svg>
