@@ -20,7 +20,7 @@
     <line x1="92.6" y1="47" x2="92.6" y2="127" stroke="#82313C" stroke-width=".48" opacity=".36"/>
     <path d="M89 144 l5.5 5.5 l-5.5 5.5 l-5.5 -5.5 z" fill="none" stroke="#82313C" stroke-width="1.05"/>
     <path d="M82 149.5H56M96 149.5h26" fill="none" stroke="#82313C" stroke-width=".62" opacity=".48"/>
-    <text class="serif" x="46" y="124" font-size="103" fill="#1c2224">I</text>
+    <text class="serif" x="41" y="124" font-size="103" fill="#1c2224">I</text>
     <text class="serif" x="96" y="124" font-size="101" fill="#1c2224">S</text>
   </g>
 </svg>
