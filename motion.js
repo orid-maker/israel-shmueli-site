@@ -9,6 +9,30 @@
 
   let languageTimer;
   let languageEndTimer;
+  let revealTargets = [];
+
+  const replayVisibleReveals = () => {
+    if (reducedMotion.matches || !root.classList.contains('motion-ready')) return;
+
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+    const visibleTargets = revealTargets.filter((target) => {
+      const bounds = target.getBoundingClientRect();
+      return bounds.bottom > 0 && bounds.top < viewportHeight * .96 && target.classList.contains('is-visible');
+    });
+
+    if (!visibleTargets.length) return;
+
+    visibleTargets.forEach((target, index) => {
+      target.style.setProperty('--reveal-index', Math.min(index, 6));
+      target.classList.remove('is-visible');
+    });
+
+    window.requestAnimationFrame(() => {
+      window.requestAnimationFrame(() => {
+        visibleTargets.forEach((target) => target.classList.add('is-visible'));
+      });
+    });
+  };
 
   const applyLanguage = (language) => {
     const nextLanguage = language === 'en' ? 'en' : 'he';
@@ -32,12 +56,16 @@
     if (!animate || reducedMotion.matches) {
       root.classList.remove('is-language-changing');
       applyLanguage(nextLanguage);
+      replayVisibleReveals();
       return;
     }
 
     root.classList.add('is-language-changing');
     languageTimer = window.setTimeout(() => applyLanguage(nextLanguage), 120);
-    languageEndTimer = window.setTimeout(() => root.classList.remove('is-language-changing'), 320);
+    languageEndTimer = window.setTimeout(() => {
+      root.classList.remove('is-language-changing');
+      replayVisibleReveals();
+    }, 360);
   };
 
   languageButtons.forEach((button) => {
@@ -58,7 +86,7 @@
     '.contact-grid > *'
   ];
 
-  const revealTargets = [...document.querySelectorAll(revealSelectors.join(','))];
+  revealTargets = [...document.querySelectorAll(revealSelectors.join(','))];
   const revealGroups = document.querySelectorAll('.service-grid, .project-list, .hero-facts, .sources-grid ul, .contact-actions, .process-list');
 
   revealGroups.forEach((group) => {

@@ -72,8 +72,9 @@ html.is-language-changing .sources-section,
 html.is-language-changing .about-section,
 html.is-language-changing .contact-section,
 html.is-language-changing .site-footer {
-  opacity: .24;
-  transform: translateY(6px);
+  opacity: .12;
+  pointer-events: none;
+  transform: translateY(8px);
 }
 
 a {
