@@ -478,9 +478,10 @@ h1 > .lang-en span,
 }
 
 .hero-topics {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px 12px;
+  display: grid;
+  grid-template-columns: repeat(6, max-content);
+  gap: 10px;
+  justify-content: start;
   max-width: 680px;
   margin: 0 0 30px;
   padding: 0;
@@ -489,11 +490,23 @@ h1 > .lang-en span,
 }
 
 .hero-topics li {
-  padding: 6px 0;
-  border-bottom: 1px solid rgba(155, 215, 244, 0.56);
+  padding: 7px 11px;
+  border: 1px solid rgba(155, 215, 244, 0.42);
+  background: rgba(255, 255, 255, 0.36);
   font-size: 16px;
   font-weight: 500;
   white-space: nowrap;
+}
+
+html:not([data-lang]) .hero-topics li:last-child:nth-child(odd),
+html[data-lang="he"] .hero-topics li:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  justify-self: center;
+}
+
+html[data-lang="en"] .hero-topics {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .hero-actions {
@@ -841,6 +854,8 @@ html[data-lang="en"] .project-showcase {
     linear-gradient(90deg, rgba(255,255,255,.96), rgba(255,255,255,.36) 38%, rgba(255,255,255,.04)),
     url("assets/editorial/legal-architecture.jpg") center right / cover no-repeat;
   opacity: .78;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 10%, #000 78%, transparent 100%);
+  mask-image: linear-gradient(180deg, transparent 0, #000 10%, #000 78%, transparent 100%);
   pointer-events: none;
   content: "";
 }
@@ -1160,11 +1175,19 @@ html[data-lang="en"] .project-showcase {
   }
 
   .hero-topics li {
-    padding: 3px 0;
+    padding: 7px 9px;
+    border-color: rgba(155, 215, 244, 0.38);
+    background: rgba(255, 255, 255, 0.42);
     font-size: 12.5px;
     line-height: 1.4;
     text-align: center;
     white-space: normal;
+  }
+
+  .hero-topics li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    min-width: min(178px, 100%);
   }
 
   .hero-content {
@@ -1296,12 +1319,15 @@ html[data-lang="en"] .project-showcase {
   }
 
   .about-section::after {
-    inset-block: auto 0;
-    right: -78px;
-    width: 260px;
+    inset-block: 34px auto;
+    right: -96px;
+    width: 286px;
     min-width: 0;
-    height: 360px;
-    opacity: .22;
+    height: 410px;
+    opacity: .16;
+    background-position: center right;
+    -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 15%, #000 62%, transparent 100%);
+    mask-image: linear-gradient(180deg, transparent 0, #000 15%, #000 62%, transparent 100%);
   }
 
   .about-section .container {
