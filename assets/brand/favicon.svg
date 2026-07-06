@@ -1,9 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="IS">
-  <rect x="5" y="5" width="54" height="54" fill="#fbf8f2" stroke="#1d2428" stroke-width="1.8"/>
-  <rect x="10" y="10" width="44" height="44" fill="none" stroke="#1d2428" stroke-width=".55" opacity=".48"/>
-  <path d="M15 17h13M36 17h13M15 47h13M36 47h13" fill="none" stroke="#1d2428" stroke-width=".45" opacity=".34"/>
-  <line x1="32" y1="15" x2="32" y2="46" stroke="#82313C" stroke-width="1.45"/>
-  <path d="M32 49 l2.8 2.8 l-2.8 2.8 l-2.8 -2.8 z" fill="none" stroke="#82313C" stroke-width=".72"/>
-  <text x="17" y="45" font-family="Georgia, serif" font-size="37" fill="#1c2224">I</text>
-  <text x="35" y="45" font-family="Georgia, serif" font-size="36" fill="#1c2224">S</text>
+  <style>
+    .mono { font-family: Georgia, "Times New Roman", serif; font-weight: 400; letter-spacing: -.08em; }
+  </style>
+  <rect x="4" y="4" width="56" height="56" fill="#fbfcfa" stroke="#1b2327" stroke-width="1.7"/>
+  <rect x="8.5" y="8.5" width="47" height="47" fill="none" stroke="#24343d" stroke-width=".55" opacity=".5"/>
+  <rect x="12" y="12" width="40" height="40" fill="none" stroke="#8dbed2" stroke-width=".42" opacity=".36"/>
+  <path d="M16 18H28M36 18H48M16 46H28M36 46H48" fill="none" stroke="#1b2327" stroke-width=".4" opacity=".34"/>
+  <line x1="32" y1="17" x2="32" y2="45" stroke="#8d313b" stroke-width="1.12"/>
+  <path d="M32 49 l2.45 2.45 l-2.45 2.45 l-2.45 -2.45 z" fill="#fbfcfa" stroke="#8d313b" stroke-width=".66"/>
+  <text class="mono" x="14" y="44" font-size="35" fill="#1a2225">I</text>
+  <text class="mono" x="34" y="44" font-size="34.5" fill="#1a2225">S</text>
 </svg>

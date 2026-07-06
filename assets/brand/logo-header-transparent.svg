@@ -14,12 +14,16 @@
 
   <rect width="900" height="210" fill="transparent"/>
   
-    <g id="is-mark" transform="translate(38,45) scale(0.9)">
-      <rect x="2" y="2" width="116" height="116" fill="#FBF8F2" stroke="#343635" stroke-width="3"/>
-      <rect x="13" y="13" width="94" height="94" fill="none" stroke="#343635" stroke-width="1.25" opacity="0.72"/>
-      <line x1="60" y1="27" x2="60" y2="93" stroke="#7E2430" stroke-width="2.35"/>
-      <text class="mono" x="33" y="82" font-size="70" fill="#222321">I</text>
-      <text class="mono" x="66" y="82" font-size="70" fill="#222321">S</text>
+    <g id="is-mark" transform="translate(38,43) scale(0.9)">
+      <rect x="0" y="0" width="120" height="120" fill="#FBFCFA" stroke="#1b2327" stroke-width="2.8"/>
+      <rect x="8" y="8" width="104" height="104" fill="none" stroke="#24343d" stroke-width="1" opacity=".52"/>
+      <rect x="14" y="14" width="92" height="92" fill="none" stroke="#8dbed2" stroke-width=".72" opacity=".34"/>
+      <path d="M22 27H52M69 27H98M22 93H52M69 93H98" fill="none" stroke="#1b2327" stroke-width=".62" opacity=".34"/>
+      <path d="M18 18h11M18 18v11M102 18H91M102 18v11M18 102h11M18 102V91M102 102H91M102 102V91" fill="none" stroke="#1b2327" stroke-width=".95" opacity=".62"/>
+      <line x1="60" y1="27" x2="60" y2="92" stroke="#8d313b" stroke-width="2.1"/>
+      <path d="M60 101 l3.8 3.8 l-3.8 3.8 l-3.8 -3.8 z" fill="#FBFCFA" stroke="#8d313b" stroke-width=".95"/>
+      <text class="mono" x="18" y="86" font-size="74" fill="#1a2225">I</text>
+      <text class="mono" x="62" y="86" font-size="73" fill="#1a2225">S</text>
     </g>
   <text class="name" x="510" y="93" text-anchor="middle" font-size="52" fill="#222321">ISRAEL SHMUELI</text>
   <line x1="237" y1="121" x2="783" y2="121" stroke="#343635" stroke-width="1.2" opacity="0.75"/>

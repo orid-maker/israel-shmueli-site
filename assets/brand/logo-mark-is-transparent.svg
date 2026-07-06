@@ -1,26 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240" role="img" aria-label="IS monogram">
   <defs>
     <style><![CDATA[
-      .serif { font-family: 'EB Garamond', 'Cormorant Garamond', Georgia, serif; font-weight: 400; letter-spacing: -0.055em; }
+      .mono { font-family: Georgia, "Times New Roman", serif; font-weight: 400; letter-spacing: -0.075em; }
     ]]></style>
-    <linearGradient id="paper" x1="31" x2="209" y1="31" y2="209" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#fffdf8"/>
-      <stop offset="1" stop-color="#f4fbff"/>
+    <linearGradient id="paper" x1="42" x2="198" y1="38" y2="204" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fffdfa"/>
+      <stop offset=".62" stop-color="#f8fbfb"/>
+      <stop offset="1" stop-color="#eef7fb"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="25" x2="215" y1="10" y2="230" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".48"/>
+      <stop offset=".52" stop-color="#e9f5fa" stop-opacity=".18"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity=".28"/>
     </linearGradient>
   </defs>
   <rect width="240" height="240" fill="transparent"/>
-  <g transform="translate(31 31)">
-    <rect x="0" y="0" width="178" height="178" fill="url(#paper)" stroke="#1d2428" stroke-width="2.7"/>
-    <rect x="10.5" y="10.5" width="157" height="157" fill="none" stroke="#1d2428" stroke-width=".85" opacity=".42"/>
-    <rect x="18.5" y="18.5" width="141" height="141" fill="none" stroke="#266f98" stroke-width=".55" opacity=".22"/>
-    <path d="M31 39H75M103 39H147M31 139H75M103 139H147" fill="none" stroke="#1d2428" stroke-width=".65" opacity=".34"/>
-    <path d="M26 26h14M26 26v14M152 26h-14M152 26v14M26 152h14M26 152v-14M152 152h-14M152 152v-14" fill="none" stroke="#1d2428" stroke-width=".95" opacity=".62"/>
-    <line x1="89" y1="42" x2="89" y2="132" stroke="#82313C" stroke-width="2.2" stroke-linecap="square"/>
-    <line x1="85.4" y1="47" x2="85.4" y2="127" stroke="#82313C" stroke-width=".48" opacity=".36"/>
-    <line x1="92.6" y1="47" x2="92.6" y2="127" stroke="#82313C" stroke-width=".48" opacity=".36"/>
-    <path d="M89 144 l5.5 5.5 l-5.5 5.5 l-5.5 -5.5 z" fill="none" stroke="#82313C" stroke-width="1.05"/>
-    <path d="M82 149.5H56M96 149.5h26" fill="none" stroke="#82313C" stroke-width=".62" opacity=".48"/>
-    <text class="serif" x="41" y="124" font-size="103" fill="#1c2224">I</text>
-    <text class="serif" x="96" y="124" font-size="101" fill="#1c2224">S</text>
+  <rect x="1" y="1" width="238" height="238" fill="url(#glass)" stroke="#9eb9c5" stroke-width=".65" opacity=".55"/>
+  <g transform="translate(42 42)">
+    <rect x="0" y="0" width="156" height="156" fill="url(#paper)" stroke="#1b2327" stroke-width="2.55"/>
+    <rect x="9.75" y="9.75" width="136.5" height="136.5" fill="none" stroke="#24343d" stroke-width=".9" opacity=".48"/>
+    <rect x="17" y="17" width="122" height="122" fill="none" stroke="#8dbed2" stroke-width=".7" opacity=".36"/>
+    <path d="M29 34H67M91 34H129M29 122H67M91 122H129" fill="none" stroke="#182226" stroke-width=".62" opacity=".32"/>
+    <path d="M24 24h14M24 24v14M132 24h-14M132 24v14M24 132h14M24 132v-14M132 132h-14M132 132v-14" fill="none" stroke="#1b2327" stroke-width="1" opacity=".62"/>
+    <line x1="78" y1="35" x2="78" y2="120" stroke="#8d313b" stroke-width="2.05" stroke-linecap="square"/>
+    <line x1="75.8" y1="41" x2="75.8" y2="114" stroke="#8d313b" stroke-width=".42" opacity=".32"/>
+    <line x1="80.2" y1="41" x2="80.2" y2="114" stroke="#8d313b" stroke-width=".42" opacity=".32"/>
+    <path d="M78 132 l4.9 4.9 l-4.9 4.9 l-4.9 -4.9 z" fill="#fbf9f4" stroke="#8d313b" stroke-width="1.05"/>
+    <path d="M70.5 136.9H48M85.5 136.9H108" fill="none" stroke="#8d313b" stroke-width=".62" opacity=".42"/>
+    <text class="mono" x="22" y="113" font-size="96" fill="#1a2225">I</text>
+    <text class="mono" x="82" y="113" font-size="95" fill="#1a2225">S</text>
   </g>
 </svg>
