@@ -449,8 +449,17 @@ h1 {
 
 h1,
 h2,
+h3,
 .hero-subtitle {
-  background: linear-gradient(180deg, #b7c4ca 0%, var(--text-gradient-end, #122633) 46%, var(--text-gradient-end, #122633) 100%);
+  background:
+    linear-gradient(
+      180deg,
+      #929da3 0%,
+      #dfe5e6 9%,
+      #aeb8bd 22%,
+      var(--text-gradient-end, #122633) 58%,
+      var(--text-gradient-end, #122633) 100%
+    );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -634,6 +643,7 @@ h2 {
 }
 
 h3 {
+  --text-gradient-end: #1f2f3a;
   margin-block-end: 12px;
   font-size: 21px;
   line-height: 1.35;
