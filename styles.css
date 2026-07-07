@@ -437,6 +437,7 @@ p {
 }
 
 h1 {
+  --text-gradient-end: #122633;
   max-width: 780px;
   margin: 0 0 14px;
   color: #122633;
@@ -444,6 +445,15 @@ h1 {
   font-weight: 700;
   line-height: 1.02;
   text-wrap: balance;
+}
+
+h1,
+h2,
+.hero-subtitle {
+  background: linear-gradient(180deg, #b7c4ca 0%, var(--text-gradient-end, #122633) 46%, var(--text-gradient-end, #122633) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h1 span,
@@ -467,6 +477,7 @@ h1 > .lang-en span,
 }
 
 .hero-subtitle {
+  --text-gradient-end: #1d566f;
   max-width: 760px;
   margin-inline: 0;
   margin-block-end: 16px;
@@ -615,6 +626,7 @@ html[data-lang="he"] .hero-actions {
 }
 
 h2 {
+  --text-gradient-end: #122633;
   margin-block-end: 18px;
   font-size: clamp(30px, 4vw, 46px);
   font-weight: 800;
@@ -640,21 +652,31 @@ p {
   border: 1px solid var(--line);
 }
 
-.process-list span {
+.process-list > span {
   position: relative;
-  padding-inline-start: 28px;
+  padding-inline-start: 30px;
   color: #2a2c2f;
   font-weight: 700;
 }
 
-.process-list span::before {
+.process-list > span::before {
   position: absolute;
   inset-inline-start: 0;
-  top: 0.72em;
-  width: 14px;
-  height: 1px;
+  top: 0.67em;
+  width: 7px;
+  height: 7px;
+  border: 1px solid rgba(38, 111, 152, 0.72);
+  border-radius: 50%;
   background: var(--metal);
   content: "";
+}
+
+.process-list > span > span {
+  padding: 0;
+}
+
+.process-list > span > span::before {
+  content: none;
 }
 
 .section-heading {
