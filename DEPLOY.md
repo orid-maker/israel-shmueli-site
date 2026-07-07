@@ -15,15 +15,15 @@ This site is static and can be served directly from GitHub Pages without a build
 4. Select branch `main` and folder `/root`.
 5. Save and wait for the Pages URL to appear.
 
-Expected temporary URL:
+Canonical public URL after DNS is connected:
 
-`https://orid-maker.github.io/israel-shmueli-site/`
+`https://israelshmuelilaw.com/`
 
 ## Custom Domain
 
-For stronger search presence, use a real domain such as `israelshmueli.co.il` or another exact-name domain.
+For stronger search presence, the site uses `israelshmuelilaw.com`.
 
-After choosing the final domain, update:
+Keep these files aligned with the final domain:
 
 - canonical URL in `index.html`
 - Open Graph URL in `index.html`
@@ -31,7 +31,7 @@ After choosing the final domain, update:
 - `sitemap.xml`
 - JSON-LD `url` field in `index.html`
 
-Then submit the final URL and sitemap in Google Search Console.
+Then submit `https://israelshmuelilaw.com/` and `https://israelshmuelilaw.com/sitemap.xml` in Google Search Console.
 
 ## Wix Option
 

@@ -19,11 +19,11 @@ This repository can be published directly with GitHub Pages:
 4. Choose branch: `main`, folder: `/root`.
 5. Save.
 
-The temporary GitHub Pages URL will usually be:
+The canonical public URL is:
 
-`https://orid-maker.github.io/israel-shmueli-site/`
+`https://israelshmuelilaw.com/`
 
-For best SEO, connect a custom domain later and update the canonical URL, sitemap and robots file to the final domain.
+The site is hosted on GitHub Pages with a custom domain managed through DNS.
 
 ## SEO Note
 
