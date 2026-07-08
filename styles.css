@@ -455,11 +455,10 @@ h3,
     linear-gradient(
       180deg,
       var(--text-gradient-end, #122633) 0%,
-      var(--text-gradient-end, #122633) 56%,
-      #243846 68%,
-      #87949a 82%,
-      #d7ddde 93%,
-      #a7b2b7 100%
+      var(--text-gradient-end, #122633) 91%,
+      #223744 97%,
+      #9aa6ab 99%,
+      #68767d 100%
     );
   -webkit-background-clip: text;
   background-clip: text;
@@ -610,6 +609,54 @@ html[data-lang="he"] .hero-actions {
 .about-section,
 .contact-section {
   padding-block: clamp(72px, 9vw, 120px);
+}
+
+.services-section,
+.contact-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.services-section::before,
+.contact-section::before {
+  position: absolute;
+  inset-block: clamp(32px, 6vw, 78px);
+  width: min(30vw, 360px);
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.99), rgba(255,255,255,.68) 42%, rgba(255,255,255,.18) 76%, rgba(255,255,255,0)),
+    url("assets/editorial/legal-architecture.jpg") center right / cover no-repeat;
+  opacity: .13;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 16%, #000 74%, transparent 100%);
+  mask-image: linear-gradient(180deg, transparent 0, #000 16%, #000 74%, transparent 100%);
+  pointer-events: none;
+  content: "";
+}
+
+.services-section::after,
+.contact-section::after {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0) 0 12%, rgba(38,111,152,.045) 12% calc(12% + 1px), rgba(255,255,255,0) calc(12% + 1px) 100%),
+    repeating-linear-gradient(135deg, rgba(38,111,152,.026) 0 1px, transparent 1px 24px);
+  opacity: .68;
+  pointer-events: none;
+  content: "";
+}
+
+.services-section::before {
+  left: max(0px, calc((100vw - 1180px) / 2 - 86px));
+  transform: scaleX(-1);
+}
+
+.contact-section::before {
+  right: max(0px, calc((100vw - 1180px) / 2 - 86px));
+}
+
+.services-section > .container,
+.contact-section > .container {
+  position: relative;
+  z-index: 2;
 }
 
 .intro-section,
@@ -982,6 +1029,17 @@ html[data-lang="en"] .project-showcase {
   .hero {
     grid-template-columns: 1fr;
     min-height: auto;
+  }
+
+  .services-section::before,
+  .contact-section::before {
+    opacity: .08;
+    width: min(46vw, 260px);
+  }
+
+  .services-section::after,
+  .contact-section::after {
+    opacity: .38;
   }
 
   .hero-content {
