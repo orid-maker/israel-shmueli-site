@@ -929,6 +929,163 @@ html[data-lang="he"] .estates-list li::before {
   transform: translateY(-2px);
 }
 
+.estates-full-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.estates-full-section::before {
+  position: absolute;
+  inset-block: 7% 8%;
+  inset-inline-start: max(0px, calc((100vw - 1120px) / 2 - 96px));
+  width: min(34vw, 420px);
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.98), rgba(255,255,255,.32) 48%, rgba(255,255,255,0)),
+    url("assets/editorial/legal-architecture.jpg") center right / cover no-repeat;
+  opacity: .11;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 14%, #000 78%, transparent 100%);
+  mask-image: linear-gradient(180deg, transparent 0, #000 14%, #000 78%, transparent 100%);
+  pointer-events: none;
+  content: "";
+}
+
+.estates-full {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: clamp(24px, 4vw, 42px);
+}
+
+.estates-hero {
+  display: grid;
+  grid-template-columns: minmax(260px, .74fr) minmax(0, 1fr);
+  gap: clamp(28px, 6vw, 78px);
+  align-items: start;
+  padding: clamp(34px, 5vw, 58px);
+  border: 1px solid rgba(38, 111, 152, 0.16);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.96), rgba(247,252,255,.8)),
+    repeating-linear-gradient(135deg, rgba(38,111,152,.035) 0 1px, transparent 1px 22px);
+  box-shadow:
+    0 26px 70px rgba(18, 38, 52, 0.065),
+    inset 0 0 0 1px rgba(255,255,255,.72);
+}
+
+.estates-lead {
+  display: grid;
+  gap: 18px;
+  max-width: 620px;
+}
+
+.estates-lead p,
+.estates-feature p,
+.estates-services-band p,
+.estates-process p,
+.estates-dispute-full p {
+  margin: 0;
+  color: #4f6673;
+  font-size: clamp(16px, 1.3vw, 18px);
+  line-height: 1.85;
+}
+
+.estates-feature-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) repeat(2, minmax(0, .96fr));
+  gap: 18px;
+}
+
+.estates-feature {
+  min-height: 270px;
+  padding: clamp(24px, 3vw, 34px);
+  border: 1px solid rgba(38, 111, 152, 0.16);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 18px 46px rgba(18, 38, 52, 0.045);
+}
+
+.estates-feature-primary {
+  background:
+    linear-gradient(160deg, rgba(255,255,255,.94), rgba(232,248,255,.82)),
+    repeating-linear-gradient(135deg, rgba(38,111,152,.038) 0 1px, transparent 1px 20px);
+}
+
+.feature-number {
+  display: inline-block;
+  margin-block-end: 24px;
+  color: rgba(38, 111, 152, 0.48);
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 32px;
+  line-height: 1;
+}
+
+.estates-feature h3,
+.estates-services-band h3,
+.estates-process h3,
+.estates-dispute-full h3 {
+  margin-block-end: 12px;
+  color: #142937;
+  font-size: clamp(21px, 2.15vw, 28px);
+}
+
+.estates-services-band {
+  display: grid;
+  grid-template-columns: minmax(230px, .45fr) minmax(0, 1fr);
+  gap: clamp(24px, 5vw, 64px);
+  align-items: start;
+  padding: clamp(30px, 4vw, 44px);
+  border: 1px solid rgba(38, 111, 152, 0.16);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.9), rgba(255,255,255,.68)),
+    linear-gradient(90deg, rgba(117,199,236,.1), transparent 42%);
+}
+
+.estates-process {
+  display: grid;
+  grid-template-columns: minmax(230px, .52fr) minmax(0, 1fr);
+  gap: clamp(24px, 5vw, 64px);
+  align-items: start;
+  padding: clamp(30px, 4vw, 44px);
+  border-block: 1px solid rgba(38, 111, 152, 0.16);
+}
+
+.estates-process ol {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: rgba(38, 111, 152, 0.13);
+  border: 1px solid rgba(38, 111, 152, 0.13);
+}
+
+.estates-process li {
+  min-height: 132px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.84);
+  color: #24485c;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.55;
+}
+
+.estates-process li::before {
+  display: block;
+  width: 34px;
+  height: 1px;
+  margin-block-end: 18px;
+  background: rgba(126, 36, 48, 0.36);
+  content: "";
+}
+
+.estates-dispute-full {
+  grid-template-columns: minmax(240px, .44fr) minmax(0, 1fr) auto;
+  padding: clamp(30px, 4vw, 44px);
+  border: 1px solid rgba(38, 111, 152, 0.16);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.94), rgba(232,248,255,.78)),
+    repeating-linear-gradient(135deg, rgba(38,111,152,.035) 0 1px, transparent 1px 20px);
+}
+
 .service-grid,
 .project-list {
   display: grid;
@@ -1337,12 +1494,20 @@ html[data-lang="en"] .project-showcase {
   }
 
   .estates-expanded,
+  .estates-hero,
+  .estates-feature-grid,
+  .estates-services-band,
+  .estates-process,
   .estates-dispute {
     grid-template-columns: 1fr;
   }
 
   .estates-dispute {
     align-items: start;
+  }
+
+  .estates-process ol {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .estates-dispute a {
@@ -1596,14 +1761,57 @@ html[data-lang="en"] .project-showcase {
     gap: 24px;
   }
 
+  .estates-full {
+    gap: 20px;
+  }
+
+  .estates-hero,
+  .estates-services-band,
+  .estates-process,
+  .estates-dispute-full {
+    padding: 28px 22px;
+  }
+
+  .estates-feature {
+    min-height: auto;
+    padding: 26px 22px;
+  }
+
   .estates-intro,
+  .estates-hero,
+  .estates-lead,
+  .estates-feature,
+  .estates-services-band,
+  .estates-process,
+  .estates-process-copy,
   .estates-panel,
   .estates-dispute {
     text-align: center;
   }
 
+  .estates-full .align-start {
+    text-align: center;
+  }
+
+  .estates-full .align-start h2::after {
+    margin-inline: auto;
+  }
+
   .estates-list {
     grid-template-columns: 1fr;
+  }
+
+  .estates-process ol {
+    grid-template-columns: 1fr;
+  }
+
+  .estates-process li {
+    min-height: auto;
+    text-align: center;
+  }
+
+  .estates-process li::before {
+    margin-inline: auto;
   }
 
   .estates-list li,
