@@ -818,10 +818,115 @@ p {
   margin-block-end: 0;
 }
 
-.estates-card p:last-child {
+.estates-card p {
   margin: 0;
   color: #4f6673;
   font-size: clamp(17px, 1.35vw, 19px);
+}
+
+.estates-expanded {
+  grid-template-columns: minmax(260px, .82fr) minmax(0, 1.18fr);
+  align-items: stretch;
+}
+
+.estates-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+}
+
+.estates-intro h2 {
+  margin-block-end: 2px;
+}
+
+.estates-panel {
+  padding: clamp(24px, 3.2vw, 34px);
+  border: 1px solid rgba(38, 111, 152, 0.16);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.74);
+}
+
+.estates-panel h3,
+.estates-dispute h3 {
+  margin-block-end: 16px;
+  color: #142937;
+  font-size: clamp(20px, 2vw, 25px);
+}
+
+.estates-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.estates-list li {
+  position: relative;
+  padding-block: 10px;
+  padding-inline: 18px 12px;
+  border-block-end: 1px solid rgba(38, 111, 152, 0.14);
+  color: #294c5f;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+html[data-lang="he"] .estates-list li {
+  padding-inline: 12px 18px;
+}
+
+.estates-list li::before {
+  position: absolute;
+  inset-block-start: 1.05em;
+  inset-inline-start: 0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #75c7ec;
+  box-shadow: 0 0 0 4px rgba(117, 199, 236, 0.16);
+  content: "";
+}
+
+html[data-lang="he"] .estates-list li::before {
+  inset-inline-start: auto;
+  inset-inline-end: 0;
+}
+
+.estates-dispute {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: minmax(220px, .55fr) minmax(0, 1fr) auto;
+  gap: clamp(18px, 3vw, 34px);
+  align-items: center;
+  padding-block-start: clamp(22px, 3vw, 30px);
+  border-block-start: 1px solid rgba(38, 111, 152, 0.16);
+}
+
+.estates-dispute h3 {
+  margin: 0;
+}
+
+.estates-dispute a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding-inline: 22px;
+  border: 1px solid rgba(38, 111, 152, 0.24);
+  background: linear-gradient(180deg, #8bd4f3, #62bee7);
+  color: #122633;
+  font-weight: 800;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.estates-dispute a:hover {
+  border-color: rgba(18, 38, 52, 0.38);
+  box-shadow: 0 16px 34px rgba(38, 111, 152, 0.18);
+  transform: translateY(-2px);
 }
 
 .service-grid,
@@ -1230,6 +1335,19 @@ html[data-lang="en"] .project-showcase {
   .project-list {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .estates-expanded,
+  .estates-dispute {
+    grid-template-columns: 1fr;
+  }
+
+  .estates-dispute {
+    align-items: start;
+  }
+
+  .estates-dispute a {
+    justify-self: start;
+  }
 }
 
 @media (max-width: 660px) {
@@ -1472,6 +1590,43 @@ html[data-lang="en"] .project-showcase {
   .service-grid,
   .project-list {
     grid-template-columns: 1fr;
+  }
+
+  .estates-expanded {
+    gap: 24px;
+  }
+
+  .estates-intro,
+  .estates-panel,
+  .estates-dispute {
+    text-align: center;
+  }
+
+  .estates-list {
+    grid-template-columns: 1fr;
+  }
+
+  .estates-list li,
+  html[data-lang="he"] .estates-list li {
+    padding-inline: 0;
+    padding-block: 12px;
+  }
+
+  .estates-list li::before,
+  html[data-lang="he"] .estates-list li::before {
+    inset-inline: 50% auto;
+    inset-block-start: auto;
+    inset-block-end: -3px;
+    transform: translateX(-50%);
+  }
+
+  html[data-lang="he"] .estates-list li::before {
+    transform: translateX(50%);
+  }
+
+  .estates-dispute a {
+    justify-self: stretch;
+    width: 100%;
   }
 
   .intro-section,
