@@ -486,20 +486,24 @@ h1 > .lang-en span,
 }
 
 .refined-abbr {
-  display: inline-block;
+  display: inline-block !important;
   white-space: nowrap;
 }
 
 .refined-quote {
-  display: inline-block;
+  display: inline-block !important;
   margin-inline: .045em .02em;
-  color: currentColor;
+  color: #122633;
   font-family: "Inter", "IBM Plex Sans Hebrew", Arial, sans-serif;
-  font-size: .78em;
-  font-weight: 500;
+  font-size: .72em;
+  font-weight: 600;
   line-height: 1;
   opacity: .86;
   transform: translateY(-.18em);
+  background: none;
+  -webkit-background-clip: initial;
+  background-clip: initial;
+  -webkit-text-fill-color: #122633;
 }
 
 .hero-subtitle {
@@ -624,6 +628,7 @@ html[data-lang="he"] .hero-actions {
 .projects-section,
 .estates-section,
 .sources-section,
+.faq-section,
 .about-section,
 .contact-section {
   padding-block: clamp(72px, 9vw, 120px);
@@ -679,6 +684,7 @@ html[data-lang="he"] .hero-actions {
 
 .intro-section,
 .estates-section,
+.faq-section,
 .sources-section,
 .contact-section {
   background:
@@ -765,6 +771,25 @@ p {
 .section-heading.align-start {
   margin-inline: 0;
   text-align: start;
+}
+
+.authority-note {
+  display: inline-flex;
+  align-items: center;
+  margin-block-start: 22px;
+  padding-block: 10px;
+  border-block: 1px solid rgba(38, 111, 152, 0.16);
+  color: #27495b;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.authority-note::before {
+  width: 34px;
+  height: 1px;
+  margin-inline-end: 12px;
+  background: rgba(126, 36, 48, 0.38);
+  content: "";
 }
 
 .section-kicker {
@@ -966,6 +991,58 @@ html[data-lang="en"] .project-showcase {
   min-width: 0;
 }
 
+.faq-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.faq-section::before {
+  position: absolute;
+  inset-block: 38px;
+  inset-inline-start: max(0px, calc((100vw - 1120px) / 2 - 60px));
+  width: min(30vw, 360px);
+  background:
+    linear-gradient(90deg, rgba(255,255,255,.98), rgba(255,255,255,.34) 46%, rgba(255,255,255,0)),
+    url("assets/editorial/legal-architecture.jpg") center right / cover no-repeat;
+  opacity: .12;
+  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 18%, #000 74%, transparent 100%);
+  mask-image: linear-gradient(180deg, transparent 0, #000 18%, #000 74%, transparent 100%);
+  pointer-events: none;
+  content: "";
+}
+
+.faq-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(240px, .72fr) minmax(0, 1.28fr);
+  gap: clamp(28px, 6vw, 78px);
+  align-items: start;
+}
+
+.faq-list {
+  display: grid;
+  gap: 1px;
+  border: 1px solid rgba(38, 111, 152, 0.16);
+  background: rgba(38, 111, 152, 0.13);
+  box-shadow: 0 26px 70px rgba(18, 38, 52, 0.055);
+}
+
+.faq-list article {
+  padding: clamp(22px, 3vw, 30px);
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.faq-list h3 {
+  margin-block-end: 8px;
+  font-size: 19px;
+}
+
+.faq-list p {
+  margin: 0;
+  font-size: 16px;
+}
+
 .about-section {
   position: relative;
   overflow: hidden;
@@ -1143,6 +1220,7 @@ html[data-lang="en"] .project-showcase {
   .about-grid,
   .contact-grid,
   .sources-grid,
+  .faq-grid,
   .estates-card,
   .project-feature {
     grid-template-columns: 1fr;
@@ -1401,6 +1479,7 @@ html[data-lang="en"] .project-showcase {
   .projects-section,
   .estates-section,
   .sources-section,
+  .faq-section,
   .about-section,
   .contact-section {
     padding-block: 64px;
@@ -1415,6 +1494,7 @@ html[data-lang="en"] .project-showcase {
   .note-card,
   .contact-card,
   .process-list,
+  .faq-list article,
   .sources-grid li {
     padding-inline: 20px;
   }
