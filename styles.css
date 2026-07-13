@@ -1086,6 +1086,101 @@ html[data-lang="he"] .estates-list li::before {
     repeating-linear-gradient(135deg, rgba(38,111,152,.035) 0 1px, transparent 1px 20px);
 }
 
+.estates-refined {
+  max-width: 1080px;
+  gap: 18px;
+}
+
+.estates-hero-refined {
+  grid-template-columns: minmax(260px, .62fr) minmax(0, 1fr);
+  gap: clamp(30px, 6vw, 86px);
+  padding: clamp(34px, 5vw, 54px);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.97), rgba(247,252,255,.72)),
+    repeating-linear-gradient(135deg, rgba(38,111,152,.026) 0 1px, transparent 1px 24px);
+  box-shadow:
+    0 22px 56px rgba(18, 38, 52, 0.052),
+    inset 0 0 0 1px rgba(255,255,255,.76);
+}
+
+.estates-hero-refined .section-heading {
+  align-self: center;
+}
+
+.estates-hero-refined .estates-lead {
+  max-width: 650px;
+  gap: 15px;
+}
+
+.estates-hero-refined .estates-lead p {
+  font-size: clamp(16px, 1.26vw, 18px);
+  line-height: 1.9;
+}
+
+.estates-services-refined {
+  grid-template-columns: minmax(220px, .38fr) minmax(0, 1fr);
+  padding: clamp(26px, 3.5vw, 38px);
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: none;
+}
+
+.estates-services-refined h3 {
+  font-size: clamp(22px, 2vw, 26px);
+}
+
+.estates-services-refined .estates-list {
+  gap: 0 18px;
+}
+
+.estates-services-refined .estates-list li {
+  padding-block: 12px;
+  font-size: 14.5px;
+}
+
+.estates-inline-cta {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding-inline: 24px;
+  border: 1px solid rgba(38, 111, 152, 0.22);
+  background: linear-gradient(180deg, #8bd4f3, #62bee7);
+  color: #122633;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease;
+}
+
+.estates-inline-cta:hover {
+  border-color: rgba(18, 38, 52, 0.38);
+  box-shadow: 0 16px 34px rgba(38, 111, 152, 0.16);
+  transform: translateY(-2px);
+}
+
+.faq-section .section-heading h2 {
+  font-size: clamp(34px, 4vw, 52px);
+}
+
+.motion-ready .faq-section .section-heading[data-reveal] {
+  opacity: 1;
+  filter: none;
+  transform: none;
+}
+
+.faq-list {
+  box-shadow: 0 18px 50px rgba(18, 38, 52, 0.045);
+}
+
+.faq-list article {
+  padding: clamp(20px, 2.6vw, 26px);
+}
+
+.faq-list h3 {
+  color: #142937;
+  font-size: 18px;
+}
+
 .service-grid,
 .project-list {
   display: grid;
@@ -1513,6 +1608,15 @@ html[data-lang="en"] .project-showcase {
   .estates-dispute a {
     justify-self: start;
   }
+
+  .estates-hero-refined,
+  .estates-services-refined {
+    grid-template-columns: 1fr;
+  }
+
+  .estates-inline-cta {
+    justify-self: start;
+  }
 }
 
 @media (max-width: 660px) {
@@ -1772,6 +1876,15 @@ html[data-lang="en"] .project-showcase {
     padding: 28px 22px;
   }
 
+  .estates-hero-refined,
+  .estates-services-refined {
+    padding: 28px 22px;
+  }
+
+  .estates-refined {
+    gap: 16px;
+  }
+
   .estates-feature {
     min-height: auto;
     padding: 26px 22px;
@@ -1795,6 +1908,15 @@ html[data-lang="en"] .project-showcase {
 
   .estates-full .align-start h2::after {
     margin-inline: auto;
+  }
+
+  .estates-hero-refined .estates-lead {
+    gap: 14px;
+  }
+
+  .estates-hero-refined .estates-lead p {
+    font-size: 16px;
+    line-height: 1.82;
   }
 
   .estates-list {
@@ -1835,6 +1957,15 @@ html[data-lang="en"] .project-showcase {
   .estates-dispute a {
     justify-self: stretch;
     width: 100%;
+  }
+
+  .estates-inline-cta {
+    justify-self: stretch;
+    width: 100%;
+  }
+
+  .faq-section .section-heading h2 {
+    font-size: clamp(30px, 8vw, 38px);
   }
 
   .intro-section,
