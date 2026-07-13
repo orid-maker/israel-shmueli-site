@@ -455,10 +455,10 @@ h3,
     linear-gradient(
       180deg,
       var(--text-gradient-end, #122633) 0%,
-      var(--text-gradient-end, #122633) 91%,
-      #223744 97%,
-      #9aa6ab 99%,
-      #68767d 100%
+      var(--text-gradient-end, #122633) 93%,
+      #203744 97%,
+      #b7c4c9 99.1%,
+      #73828a 100%
     );
   -webkit-background-clip: text;
   background-clip: text;
@@ -570,13 +570,26 @@ html[data-lang="he"] .hero-actions {
   border: 1px solid rgba(38, 111, 152, 0.22);
   font-weight: 700;
   letter-spacing: 0;
+  transition: background .22s ease, border-color .22s ease, box-shadow .22s ease, transform .22s ease;
 }
 
 .btn.primary {
-  background: linear-gradient(180deg, #92d6f4 0%, #73c3e9 100%);
-  border-color: rgba(38, 111, 152, 0.18);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.72), rgba(134,207,240,.76)),
+    linear-gradient(90deg, rgba(255,255,255,.46), rgba(255,255,255,0));
+  border-color: rgba(38, 111, 152, 0.28);
   color: #0d2634;
-  box-shadow: 0 16px 34px rgba(38, 111, 152, 0.16);
+  box-shadow:
+    0 14px 30px rgba(38, 111, 152, 0.12),
+    inset 0 1px 0 rgba(255,255,255,.82);
+}
+
+.btn.primary:hover {
+  border-color: rgba(18, 38, 52, 0.34);
+  box-shadow:
+    0 18px 38px rgba(38, 111, 152, 0.16),
+    inset 0 1px 0 rgba(255,255,255,.9);
+  transform: translateY(-2px);
 }
 
 .btn.secondary {
@@ -1144,8 +1157,10 @@ html[data-lang="he"] .estates-list li::before {
   justify-content: center;
   min-height: 52px;
   padding-inline: 24px;
-  border: 1px solid rgba(38, 111, 152, 0.22);
-  background: linear-gradient(180deg, #8bd4f3, #62bee7);
+  border: 1px solid rgba(38, 111, 152, 0.26);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.74), rgba(132,205,240,.7)),
+    linear-gradient(90deg, rgba(255,255,255,.48), rgba(255,255,255,0));
   color: #122633;
   font-weight: 800;
   text-decoration: none;
@@ -1483,6 +1498,131 @@ html[data-lang="en"] .project-showcase {
 
 .email-card {
   grid-column: span 2;
+}
+
+.service-grid {
+  gap: 0;
+  border-block: 1px solid rgba(38, 111, 152, 0.16);
+  background: rgba(255, 255, 255, 0.42);
+}
+
+.service-grid article {
+  min-height: 248px;
+  padding: clamp(26px, 3vw, 36px);
+  border: 0;
+  border-inline-start: 1px solid rgba(38, 111, 152, 0.13);
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.68), rgba(255,255,255,.38));
+  box-shadow: none;
+}
+
+.service-grid article:last-child {
+  border-inline-start: 0;
+}
+
+html[data-lang="en"] .service-grid article {
+  border-inline-start: 0;
+  border-inline-end: 1px solid rgba(38, 111, 152, 0.13);
+}
+
+html[data-lang="en"] .service-grid article:last-child {
+  border-inline-end: 0;
+}
+
+.service-grid article::before {
+  width: 34px;
+  height: 1px;
+  margin-block-end: 24px;
+  background: rgba(126, 36, 48, 0.38);
+}
+
+.service-grid h3 {
+  font-size: clamp(20px, 2vw, 24px);
+  line-height: 1.32;
+}
+
+.service-grid p {
+  color: #607380;
+  font-size: 15.5px;
+  line-height: 1.78;
+}
+
+.project-list article {
+  background:
+    linear-gradient(180deg, rgba(255,255,255,.88), rgba(255,255,255,.62));
+  box-shadow: none;
+}
+
+.sources-grid li,
+.faq-list article,
+.contact-card {
+  background: rgba(255, 255, 255, 0.76);
+  box-shadow: none;
+}
+
+.contact-grid {
+  grid-template-columns: minmax(280px, .86fr) minmax(360px, 1.14fr);
+  align-items: start;
+}
+
+.contact-actions {
+  position: relative;
+  gap: 0;
+  border: 1px solid rgba(38, 111, 152, 0.17);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.82), rgba(236,248,254,.42)),
+    repeating-linear-gradient(135deg, rgba(38,111,152,.024) 0 1px, transparent 1px 22px);
+  box-shadow:
+    0 26px 70px rgba(18, 38, 52, 0.055),
+    inset 0 1px 0 rgba(255,255,255,.92);
+}
+
+.contact-card {
+  min-height: 118px;
+  border: 0;
+  border-inline-start: 1px solid rgba(38, 111, 152, 0.12);
+  border-block-end: 1px solid rgba(38, 111, 152, 0.12);
+  background: transparent;
+  transition: background .2s ease, transform .2s ease;
+}
+
+.contact-card:nth-child(2n) {
+  border-inline-start: 0;
+}
+
+.contact-card:nth-last-child(-n + 2) {
+  border-block-end: 1px solid rgba(38, 111, 152, 0.12);
+}
+
+.contact-card:hover {
+  background: rgba(255, 255, 255, 0.46);
+  transform: translateY(-1px);
+}
+
+.contact-card strong {
+  color: #142937;
+}
+
+.email-card {
+  grid-column: 1 / -1;
+  min-height: 104px;
+}
+
+.contact-card[href*="google.com"] {
+  grid-column: 1 / -1;
+  min-height: 100px;
+  border-block-end: 0;
+}
+
+.email-card,
+.contact-card[href*="google.com"] {
+  display: grid;
+  grid-template-columns: minmax(92px, .38fr) minmax(0, 1fr);
+  align-items: center;
+}
+
+.contact-card[href^="mailto"] strong {
+  letter-spacing: .01em;
 }
 
 .site-footer {
@@ -1861,6 +2001,27 @@ html[data-lang="en"] .project-showcase {
     grid-template-columns: 1fr;
   }
 
+  .service-grid {
+    border: 1px solid rgba(38, 111, 152, 0.16);
+  }
+
+  .service-grid article,
+  html[data-lang="en"] .service-grid article {
+    min-height: auto;
+    border-inline: 0;
+    border-block-end: 1px solid rgba(38, 111, 152, 0.13);
+    text-align: center;
+  }
+
+  .service-grid article:last-child,
+  html[data-lang="en"] .service-grid article:last-child {
+    border-block-end: 0;
+  }
+
+  .service-grid article::before {
+    margin-inline: auto;
+  }
+
   .estates-expanded {
     gap: 24px;
   }
@@ -1968,6 +2129,11 @@ html[data-lang="en"] .project-showcase {
     font-size: clamp(30px, 8vw, 38px);
   }
 
+  .section-heading.align-start {
+    margin-inline: auto;
+    text-align: center;
+  }
+
   .intro-section,
   .services-section,
   .projects-section,
@@ -2032,7 +2198,37 @@ html[data-lang="en"] .project-showcase {
     grid-template-columns: 1fr;
   }
 
+  .contact-grid > div:first-child {
+    max-width: 340px;
+    margin-inline: auto;
+    text-align: center;
+  }
+
+  .contact-card,
+  .email-card,
+  .contact-card[href*="google.com"] {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    min-height: 110px;
+    text-align: center;
+    border-inline: 0;
+  }
+
+  .contact-card[href^="mailto"] strong {
+    width: 100%;
+    text-align: center;
+  }
+
+  .faq-list article {
+    text-align: center;
+  }
+
   .email-card {
+    grid-column: auto;
+  }
+
+  .contact-card[href*="google.com"] {
     grid-column: auto;
   }
 
